@@ -69,22 +69,76 @@ async function runTask() {  // This is used so that I can use await:-
 };
 
 // Using Async and Await I will change the heading title:- 
-let h1 = document.querySelector("h1");
+/** let h1 = document.querySelector("h1");
 
 function colorChanger(color, delay) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
+            let number = Math.floor(Math.random() * 10) + 1;
+            if (number > 3) {
+                reject(" promise was rejected");
+            }
+
+
             h1.style.color = color;
+            console.log("color has changed to", color);
             resolve(" Color was changes Successfully");
         }, delay);
     })
 }
 
 async function modifiedColor() {
-    await colorChanger("purple", 1000);
-    await colorChanger("pink", 1000);
-    await colorChanger("blue", 1000);
-    await colorChanger("maroon", 1000);
+    try {
+        await colorChanger("purple", 1000);
+        await colorChanger("pink", 1000);
+        await colorChanger("blue", 1000);
+        await colorChanger("maroon", 1000);
+    } catch (err) {
+        console.log(" error caught");
+        console.log(err);
+    }
+
+    let a = 5;
+    console.log(a);
+    console.log("new number", a + 6);
 }
 
-modifiedColor();
+modifiedColor(); **/
+
+// Assignment question on Async and await:- 
+
+let h2 = document.querySelector("h2");
+
+function safeChanger(color, delay) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let digit = Math.floor(Math.random() * 10) + 1;
+            if (digit <= 4) {
+                h2.style.color = color;
+                resolve(" Color has changed SuccessFully of h2", color);
+            } else {
+                reject(" Color has not changed SuccessFully");
+            }
+        }, delay);
+    });
+};
+
+async function runSafer() {
+    try {
+        await safeChanger("green", 1000);
+        await safeChanger("grey", 1000);
+        await safeChanger("#F54927", 1000);
+        await safeChanger("F5B027", 1000);
+    } catch (err) {
+        console.log(" Color changing Failed");
+        console.log(err);
+    }
+
+    // Another basic operation performing:- 
+    let x = 20;
+    let y = 25;
+    let ans = x + y;
+    console.log(ans);
+}
+
+runSafer();
