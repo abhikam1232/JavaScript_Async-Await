@@ -34,3 +34,22 @@ async function demo() {
 }
 
 demo();
+
+let h1 = document.querySelector("h1");
+
+function changeColor(color, delay) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            h1.style.color = color;
+            resolve(" Color has been changed");
+        }, delay)
+    });
+};
+
+async function demo2() {
+    await changeColor("red", 1000);
+    await changeColor("purple", 1000);
+    await changeColor("yellow", 1000);
+}
+
+demo2();
