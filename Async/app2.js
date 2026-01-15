@@ -57,7 +57,7 @@ function getRandomEvent() {
 }
 
 
-async function runTask() {
+async function runTask() {  // This is used so that I can use await:- 
     await getRandomEvent()
         .then((res) => {
             console.log(res);
@@ -67,3 +67,24 @@ async function runTask() {
         });
 
 };
+
+// Using Async and Await I will change the heading title:- 
+let h1 = document.querySelector("h1");
+
+function colorChanger(color, delay) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            h1.style.color = color;
+            resolve(" Color was changes Successfully");
+        }, delay);
+    })
+}
+
+async function modifiedColor() {
+    await colorChanger("purple", 1000);
+    await colorChanger("pink", 1000);
+    await colorChanger("blue", 1000);
+    await colorChanger("maroon", 1000);
+}
+
+modifiedColor();
