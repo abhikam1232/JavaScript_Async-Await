@@ -10,4 +10,4 @@ console.log(Array.isArray(objectApi.users));
 
 let final = JSON.stringify(objectApi);
 console.log(final);
-typeof final;
+typeof final;   // Now using this it is converted to string again... 
