@@ -1,4 +1,4 @@
-let url = ("https://catfact.ninja/fact");
+/** let url = ("https://catfact.ninja/fact");
 
 fetch(url)
     .then((Response) => {
@@ -10,4 +10,27 @@ fetch(url)
     })
     .catch((err) => {
         console.log(" Request has Failed");
-    });
+    }); **/
+
+let url = ("https://catfact.ninja/fact");
+
+fetch(url)
+    .then((output) => {
+        console.log("Response has initiated", output);
+        return output.json();
+    })
+    .then((data) => {
+        console.log(data.fact);
+        return fetch(url)
+    })
+    .then((output) => {
+        console.log(output);
+        return output.json();
+    })
+    .then((data2) => {
+        console.log(data2.fact);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+
