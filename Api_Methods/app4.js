@@ -32,15 +32,15 @@ async function Retrieve() {
     try {
         let res1 = await fetch(url);
         let data1 = await res1.json();
-        console.log(data1);
+        console.log(data1.value);
 
         let res2 = await fetch(url);
         let data2 = await res2.json();
-        console.log(res2);
+        console.log(data2.value);
 
         let res3 = await fetch(url);
         let data3 = await res3.json();
-        console.log(data3);
+        console.log(data3.value);
     } catch (err) {
         console.log(err);
     }
