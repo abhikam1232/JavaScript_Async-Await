@@ -12,7 +12,7 @@ fetch(url)
         console.log(" Request has Failed");
     }); **/
 
-let url = ("https://catfact.ninja/fact");
+/** let url = ("https://catfact.ninja/fact");
 
 fetch(url)
     .then((output) => {
@@ -32,5 +32,36 @@ fetch(url)
     })
     .catch((error) => {
         console.log(error);
+    }) **/
+
+let url = "https://api.chucknorris.io/jokes/random";
+
+fetch(url)
+    .then((res) => {
+        console.log("Response 1 has been initiated SuccessFully", res);
+        return res.json();
+    })
+    .then((info) => {
+        console.log(info.value);
+        return fetch(url) // Again fetch is used for chaining:- 
+    })
+    .then((res) => {
+        console.log("Response 2 has been initiated SuccessFully", res);
+        return res.json();
+    })
+    .then((info2) => {
+        console.log(info2.value);
+        return fetch(url);
+    })
+    .then((res) => {
+        console.log("Response 3 has been initiated", res);
+        return res.json();
+    })
+    .then((info3) => {
+        console.log(info3.value);
+    })
+    .catch((error) => {
+        console.log("error");
     })
 
+console.log(" My name is Abhi");
