@@ -64,4 +64,3 @@ fetch(url)
         console.log("error");
     })
 
-console.log(" My name is Abhi");

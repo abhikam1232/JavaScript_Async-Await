@@ -1,5 +1,6 @@
 let myurl = "https://api.agify.io/?name=abhishek";
 
+
 fetch(myurl)
     .then((result) => {
         console.log(result);
@@ -9,5 +10,5 @@ fetch(myurl)
         console.log(info);
     })
     .catch((err) => {
-        console.log(err.count);
+        console.log(err);
     })
