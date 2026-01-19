@@ -50,9 +50,43 @@ dogBtn.addEventListener("click", async () => {
     let type = await dogType();
     console.log(type);
     par2.innerText = type;
+    par2.style.margin = "auto";
+    par2.style.color = "#0C2C55";
+    par2.style.fontSize = "1.5em";
+    par2.style.fontWeight = "550";
+
+    par2.innerText = url2;
+    par2.style.cursor = "pointer";
+    par2.style.color = "#0C2C55";
+    par2.onclick = () => {
+        window.open(url2, "_blank");
+    };
+
 })
 
 // Now we will be working on the third part:- 
 
+let url3 = "https://icanhazdadjoke.com/";
+
+async function jokeFetch() {
+    try {
+
+        const config = { headers: { Accept: "application/json" } };
+        let res3 = await axios.get(url3, config);
+        return res3.data.joke;
+    } catch (err) {
+        console.log(" Error initiated", err);
+    }
+}
+
+qBtn.addEventListener("click", async () => {
+    let joker = await jokeFetch();
+    console.log(joker);
+    par3.innerText = joker;
+    par3.style.margin = "auto";
+    par3.style.color = "#0C2C55";
+    par3.style.fontSize = "1.5em";
+    par3.style.fontWeight = "550";
+});
 
 
