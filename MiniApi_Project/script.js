@@ -47,9 +47,13 @@ async function dogType() {
 }
 
 dogBtn.addEventListener("click", async () => {
-    let type = await dogType();
-    console.log(type);
-    par2.innerText = type;
+    let link = await dogType();
+    console.log(link);
+    let image = document.querySelector("#dogs");
+    image.setAttribute("src", link);
+
+
+    /** par2.innerText = type;
     par2.style.margin = "auto";
     par2.style.color = "#0C2C55";
     par2.style.fontSize = "1.5em";
@@ -60,7 +64,7 @@ dogBtn.addEventListener("click", async () => {
     par2.style.color = "#0C2C55";
     par2.onclick = () => {
         window.open(url2, "_blank");
-    };
+    }; **/
 
 })
 
