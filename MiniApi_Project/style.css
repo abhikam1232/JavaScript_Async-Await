@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Andada Pro", serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #4ECDC4;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #556270, #4ECDC4);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.head {
+    height: 40px;
+    width: 100%;
+    background-color: whitesmoke;
+    color: rgb(101, 98, 98);
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: "Andada Pro", serif;
+}
+
+
+#Cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cardOne {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.762);
+}
+
+.cardOne h3 {
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 50px;
+}
+
+
+.btnOne {
+    width: 200px;
+    margin: auto;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btnOne:hover {
+    color: maroon;
+}
+
+.btnTwo {
+    width: 200px;
+    margin: auto;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btnTwo:hover {
+    color: maroon;
+}
+
+.btnThree {
+    width: 200px;
+    margin: auto;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btnThree:hover {
+    color: maroon;
+}

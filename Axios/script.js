@@ -13,7 +13,6 @@ async function getFacts() {
         console.log(err);
     }
 
-    par.innerText = response.data.fact;
 };
 
 btn.addEventListener("click", async () => {
