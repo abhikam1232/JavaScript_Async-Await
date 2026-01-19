@@ -26,7 +26,33 @@ catBtn.addEventListener("click", async () => {
     console.log(fact);
     par1.innerText = fact;
     par1.style.marginBottom = "10px";
-    par1.style.color = "maroon";
+    par1.style.color = "#0C2C55";
     par1.style.margin = "auto";
     par1.style.fontSize = "1.5em";
+    par1.style.fontWeight = "550";
 });
+
+// Now we will be working for the second part :- 
+
+let url2 = "https://dog.ceo/api/breeds/image/random";
+
+async function dogType() {
+    try {
+        let res2 = await axios.get(url2);
+        console.log(res2.data.message);
+        return res2.data.message;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+dogBtn.addEventListener("click", async () => {
+    let type = await dogType();
+    console.log(type);
+    par2.innerText = type;
+})
+
+// Now we will be working on the third part:- 
+
+
+
