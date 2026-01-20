@@ -12,3 +12,14 @@ async function getJokes() {
 }
 
 
+let url2 = "https://catfact.ninja/fact";
+
+async function getfact() {
+    try {
+        const config2 = { headers: { Accept: "text/plain" } };
+        let result = await axios.get(url2, config2);
+        console.log(result.data);
+    } catch (err) {
+        console.log(" Error has been caught");
+    }
+}
